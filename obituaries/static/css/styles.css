@@ -1,0 +1,151 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #0066cc;
+    --border-color: #cccccc;
+    --button-bg: #0033ff;
+    --button-text: #ffffff;
+    --button-hover: #0044dd;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --link-color: #66b3ff;
+    --border-color: #444444;
+    --button-bg: #0033ff;
+    --button-text: #ffffff;
+    --button-hover: #0044dd;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+header {
+    background-color: var(--border-color);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 100%;
+    box-sizing: border-box
+}
+
+footer {
+    background-color: var(--border-color);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+#theme-toggle {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+#theme-toggle:hover {
+    opacity: 0.9;
+}
+
+.submit-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-weight: bold;
+}
+
+article {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.pagination {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.pagination a, .pagination span {
+    padding: 0.5rem;
+    margin: 0 0.25rem;
+    border: 1px solid var(--border-color);
+    color: var(--link-color);
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.pagination .current-page {
+    background-color: var(--link-color);
+    color: var(--bg-color);
+}
+
+.no-obituaries {
+    text-align: center;
+    margin-top: 2rem;
+}

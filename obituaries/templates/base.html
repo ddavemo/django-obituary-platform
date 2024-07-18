@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Obituary Platform{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'view_obituaries' %}">Obituary Platform</a></h1>
+        <nav>
+            <a href="{% url 'view_obituaries' %}">View Obituaries</a>
+            <a href="{% url 'obituary_form' %}">Submit Obituary</a>
+        </nav>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Obituary Platform</p>
+    </footer>
+
+    <script src="{% static 'js/theme.js' %}"></script>
+</body>
+</html>
